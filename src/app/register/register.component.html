@@ -1,0 +1,42 @@
+<app-header (isActive)="changeState($event)"></app-header>
+<div class="container-fluid vh-100 " [ngClass]="{'color-negro': isActive ==true }">
+<div class="card pt-2 mx-auto anchura">
+    <div class="card-body ">
+        <h5 class="card-title text-center color-texto">Registrarse</h5>
+        <form [formGroup]="registerForm" (ngSubmit)="onRegister()">
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombre" formControlName="nombre" [ngClass]="{'is-invalid': Nombre.hasError('required') && Nombre.touched , 'is-valid': !Nombre.hasError('required')}">
+            <div *ngIf="Nombre?.errors && Nombre.touched">
+              <p *ngIf="Nombre.hasError('required')" class="text-danger">Ingrese un nombre</p>
+            </div>
+          </div>
+            <div class="mb-3">
+                <label for="usuario" class="form-label">Usuario</label>
+                <input type="text" class="form-control" id="usuario" formControlName="nombreUsuario" [ngClass]="{'is-invalid': NombreUsuario.hasError('required') && NombreUsuario.touched , 'is-valid': !NombreUsuario.hasError('required')}">
+                <div *ngIf="NombreUsuario?.errors && NombreUsuario.touched" >
+                  <p *ngIf="NombreUsuario.hasError('required')" class="text-danger">Ingrese un nombre de usuario</p>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" formControlName="email" [ngClass]="{'is-invalid': Email.hasError('required')&& Email.touched || Email.hasError('email')&& Email.touched, 'is-valid': !Email.hasError('required') && Email.touched || !Email.hasError('email') && Email.touched}">
+                <div *ngIf="Email?.errors && Email.touched" >
+                  <p *ngIf="Email.hasError('required')" class="text-danger">Ingrese un email</p>
+                    <p *ngIf="Email.hasError('email')" class="text-danger">El email ingresado no es correcto</p>
+                </div>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Contraseña</label>
+                <input type="password" class="form-control" id="password" formControlName="password" [ngClass]="{'is-invalid': Password.hasError('required') && Password.touched , 'is-valid': !Password.hasError('required') && Password.touched}">
+                <div *ngIf="Password?.errors && Password.touched" >
+                  <p *ngIf="Password.hasError('required')" class="text-danger">Ingrese una Contraseña</p>
+                </div>
+              </div>
+              <div class="text-center mb-3">
+                <button class="btn btn-outline-warning w-75 h-25 fs-5">Entrar</button>
+              </div>
+        </form>
+    </div>
+</div>
+</div>

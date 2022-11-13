@@ -1,0 +1,110 @@
+<app-header (isActive)="changeState($event)"></app-header>
+<div class="container-fluid p-0 m-0 vh-100" [ngClass]="{'color-negro': isActive ==true }">
+  <div class="card card-publicacion w-75 mx-auto" *ngIf="publicacion">
+    <div class="row g-0">
+      <div class="col-6">
+        <img
+          [src]="publicacion.imagen"
+          class="img-fluid rounded-start"
+          alt="..."
+        />
+      </div>
+      <div class="col-6">
+        <div class="card-body shadow back w-100 h-100">
+          <p class="card-title text-center fw-bolder">
+            {{ publicacion.header }}
+          </p>
+          <p class="card-text">{{ publicacion.body }}</p>
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let comentar of comentario">
+      <div class="commentBox">
+        <ul class="list-unstyled mx-auto">
+          <li>
+            <span class="profileText w-100">{{ comentar.description }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <form class="reply-form" (ngSubmit)="onSubmit()">
+      <div id="div_id_username" class="form-group">
+        <div class="controls form-group d-flex w-100">
+          <input
+            class="input-md textinput textInput form-control"
+            name="description"
+            [(ngModel)]="comment.description"
+            placeholder="Comentar"
+            type="text"
+          />
+          <button type="submit" class="btn btn-info border-radius-0 m-0 w-25">
+            Enviar
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="container-fluid">
+    <div class="mt-3 d-flex" *ngIf="skeletonState">
+      <ngx-skeleton-loader class="container-fluid p-0 w-25" count="1" 
+      appearance="line" 
+      [theme]="{ 
+        'border-radius': '5px',
+        height: '90px',
+        border: '1px solid white'
+      }"></ngx-skeleton-loader>
+      <ngx-skeleton-loader class="container-fluid p-0"
+      count="1"
+      appearance=""
+      [theme]="{ 
+        'border-radius': '5px',
+        height: '90px',
+        border: '1px solid white'
+      }"
+      animation="progress"
+    ></ngx-skeleton-loader>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="mt-3 d-flex" *ngIf="skeletonState">
+      <ngx-skeleton-loader class="container-fluid p-0 w-25" count="1" 
+      appearance="line" 
+      [theme]="{ 
+        'border-radius': '5px',
+        height: '90px',
+        border: '1px solid white'
+      }"></ngx-skeleton-loader>
+      <ngx-skeleton-loader class="container-fluid p-0"
+      count="1"
+      appearance=""
+      [theme]="{ 
+        'border-radius': '5px',
+        height: '90px',
+        border: '1px solid white'
+      }"
+      animation="progress"
+    ></ngx-skeleton-loader>
+    </div>
+  </div>
+  <div class="container-fluid">
+    <div class="mt-3 d-flex" *ngIf="skeletonState">
+      <ngx-skeleton-loader class="container-fluid p-0 w-25" count="1" 
+      appearance="line" 
+      [theme]="{ 
+        'border-radius': '5px',
+        height: '90px',
+        border: '1px solid white'
+      }"></ngx-skeleton-loader>
+      <ngx-skeleton-loader class="container-fluid p-0"
+      count="1"
+      appearance=""
+      [theme]="{ 
+        'border-radius': '5px',
+        height: '90px',
+        border: '1px solid white'
+      }"
+      animation="progress"
+    ></ngx-skeleton-loader>
+    </div>
+  </div>
+</div>

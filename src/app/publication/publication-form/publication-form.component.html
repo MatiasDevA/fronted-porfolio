@@ -1,0 +1,69 @@
+<app-header (isActive)="changeState($event)"></app-header>
+<div
+  class="container-fluid vh-100"
+  [ngClass]="{ 'color-negro': isActive == true }"
+>
+  <div class="card pt-3 mx-auto anchura">
+    <div class="card-body">
+      <h5 class="card-title text-center color-texto">Publicar</h5>
+      <form [formGroup]="publicationForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="header" class="form-label">Titulo</label>
+          <input
+            type="text"
+            class="form-control"
+            id="header"
+            formControlName="header"
+            [ngClass]="{
+              'is-invalid': Header.hasError('required') && Header.touched,
+              'is-valid': !Header.hasError('required')
+            }"
+          />
+          <div *ngIf="Header?.errors && Header.touched">
+            <p *ngIf="Header.hasError('required')" class="text-danger">
+              Ingrese un titulo
+            </p>
+          </div>
+        </div>
+        <div class="mb-3">
+          <label for="imagen" class="form-label">Imagen</label>
+          <input
+            type="file"
+            class="form-control"
+            id="imagen"
+            formControlName="imagen"
+            accept=".png  , .jpg , .jpeg"
+            (change)="changeImageBase64($event)"
+            [ngClass]="{'is-invalid': Imagen.hasError('required') && Imagen.touched , 'is-valid': !Imagen.hasError('required')}"
+          />
+          <div *ngIf="Imagen?.errors && Imagen.touched">
+            <p *ngIf="Imagen.hasError('required')" class="text-danger">
+              Ingrese una imagen
+            </p>
+          </div>
+        </div>
+        <div>
+          <img [src]="archivoImage" class="img-thumbnail" alt="" />
+        </div>
+        <div class="mb-3">
+          <label for="body" class="form-label">Descripción</label>
+          <input
+            type="text"
+            class="form-control"
+            id="body"
+            formControlName="body"
+            [ngClass]="{'is-invalid': Body.hasError('required') && Body.touched , 'is-valid': !Body.hasError('required')}"
+          />
+          <div *ngIf="Body?.errors && Body.touched">
+            <p *ngIf="Body.hasError('required')" class="text-danger">
+              Ingrese una descriptión
+            </p>
+          </div>
+        </div>
+        <div class="text-center mb-3">
+          <button class="btn btn-outline-warning w-75 h-25 fs-5">Envíar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

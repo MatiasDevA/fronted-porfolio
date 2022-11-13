@@ -1,0 +1,109 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+.shadow{
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.back{
+    background-color: #f5f5f5;
+}
+
+.reply-form {
+    background: #fff;
+    border:1px solid #eee;
+    padding: 37px;
+}
+.color-negro{
+    background-color: rgb(32, 31, 31);
+}
+
+
+
+.textInput {
+    border-radius: 0;
+    height: 45px;
+    margin: 0 !important;
+}
+.border-radius-0{
+    border-radius:0;
+}
+.textInput:focus {
+    box-shadow: none;
+    outline: none
+}
+.commentBox ul li .profileBox {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #002247;
+    color: #fff;
+    font-weight: 700;
+}
+.commentBox ul li:nth-child(even) .profileBox {
+    background-color: #222;
+}
+
+.profileText {
+    border-radius: 7px;
+    padding: 10px;
+    position: relative;
+    background-color: #e0efff;
+    display: inline-block;
+    margin-left: 15px;
+    width: 50%;
+}
+.profileText::before {
+    content: '';
+    position: absolute;
+    left: -9px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0px;
+    height: 0px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #e0efff;
+    z-index: 1;
+}
+.commentBox ul li {
+    display: flex;
+    align-items: center;
+}
+.commentBox ul li:nth-child(even) .profileText::before {
+    left: unset;
+    right: -9px;
+    transform: translateY(-50%) rotate(175deg);
+}
+.commentBox ul li:nth-child(even) .profileText {
+    text-align: left;
+}
+div#div_id_username {
+    margin-top: 5%;
+}
+.commentBox ul li:nth-child(even) .profileText {
+    margin-left: 0;
+    margin-right: 15px
+}
+.commentBox ul li:nth-child(even) {
+    text-align: right;
+    margin: 20px 0;
+    justify-content: flex-end;
+}
+.card h4 {
+    background-color: #f8f8f8;
+    padding: 15px;
+    font-size: 18px
+}
+.card ul li:not(:last-child) {
+    border-bottom: 1px solid #f3f3f3;
+}
+.card ul li {
+    padding: 10px 15px
+}
+.card ul li p {
+    margin: 0
+}

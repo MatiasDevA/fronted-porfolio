@@ -1,0 +1,18 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+.color-texto{
+    color: #D3DA31;
+    font-size: 40px;
+}
+
+.color-negro{
+    background-color: rgb(32, 31, 31);
+}
+
+
+@media only screen and (min-width: 1920px) {
+    .anchura{
+     width: 400px;
+    }
+   }

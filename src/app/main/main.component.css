@@ -1,0 +1,154 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+
+.color-negro{
+    background-color: rgb(32, 31, 31);
+}
+.letramedio{
+    font-family: 'Roboto', sans-serif;
+    padding: 50px;
+    font-size: 50px;
+   color: #D3DA31;
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.letramedio1{
+    font-family: 'Roboto', sans-serif;
+    margin-top: 30px;
+    vertical-align: middle;
+    font-size: 20px;
+}
+
+.botoncurriculum{
+    text-align: center;
+    margin-top: 70px;
+    
+}
+.decoration{
+    list-style: none;
+}
+
+.imagen-pic{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-image: linear-gradient(to bottom, #d3da31, #dae164, #e2e88c, #e9eeb2, #f1f4d7);
+    overflow: hidden; 
+}
+.imagen-dentro{
+    object-fit: cover;
+  
+}
+.letramedio3{
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    color: #D3DA31;
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.imagen-card{
+    width: 110px;
+    height: 110px;
+    border-top: 10px double rgba(3,3,3,0.18);
+    border-bottom: 10px double rgba(3,3,3,0.18);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.imagen-card:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.letramedio4{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+   color: #D3DA31;;
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+.card-shadow{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.card-letter-color{
+    color: #D3DA31;;
+}
+
+.text-publicacion{
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    letter-spacing: 10px;
+}
+
+.spawn{
+    color: #D3DA31;; 
+}
+.letraPublicacion{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+
+
+.card-publicacion{
+    font-family: 'Roboto', sans-serif;
+    border-top: solid 4px  #D3DA31;
+    border-right: solid 1px  #D3DA31 ;
+}
+
+.shadow{
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.back{
+    background-color: #f5f5f5;
+}
+@media only screen and (min-width: 1400px) {
+    .maximo{
+     display: block;
+    }
+    .card-publicacion{
+        width: 400px;
+    height: 250px;
+    }
+   }
+
+@media only screen and (max-width: 992px) {
+    .letramedio {
+     font-size: 65px;
+    }
+    .letramedio1{
+        font-size: 25px;
+    }
+    .texto-boton{
+       font-size: 20px;
+    }
+    svg{
+        width: 35px;
+        height: 35px;
+    }
+    .imagen-pic{
+    width: 225px;
+    height: 225px;
+    }
+    .letramedio3{
+        font-size: 32px;
+    }
+    .imagen-card{
+        width: 125px;
+        height: 125px;
+    }
+    .letramedio4{
+        font-size: 35px;
+    }
+    .text-publicacion{
+        font-size: 35px;
+    }
+    .letraPublicacion{
+        font-size: 25px;
+    }
+    .letralink{
+        font-size: 17px;
+       
+    }
+
+  }

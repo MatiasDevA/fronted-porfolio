@@ -1,0 +1,19 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap');
+
+.color-negro{
+    background-color: rgb(32, 31, 31);
+}
+.letra{
+    font-family: 'Roboto', sans-serif;
+}
+.bloque{
+    display: block;
+}
+.movement{
+    padding-left: 100px;
+}
+
+.movement1{
+    padding-left: 180px;
+}
